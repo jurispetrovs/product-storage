@@ -13,12 +13,12 @@ class ProductsController
     {
         $products = (new ShowProductList())->execute();
 
-        return require_once __DIR__ . '/../../resources/views/ProductListView.php';
+        return require_once __DIR__ . '/../../resources/views/products/list.view.php';
     }
 
     public function show()
     {
-        return require_once __DIR__ . '/../../resources/views/CreateProductView.php';
+        return require_once __DIR__ . '/../../resources/views/products/create.view.php';
     }
 
     public function create()
