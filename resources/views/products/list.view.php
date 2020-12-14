@@ -47,8 +47,8 @@
                 <input type="hidden" name="_method" value="DELETE">
             </form>
 
-            <div class="mx-auto px-4 sm:px-8 py-2 text-center">
-                <div class="grid grid-cols-8 gap-4 items-start mt-8 mx-auto px-8">
+            <div class="mx-auto px-4 sm:px-8 text-center">
+                <div class="grid grid-cols-8 gap-4 items-start mx-auto px-8">
 
                     <?php foreach ($products as $product): ?>
                         <div class="col-span-6 sm:col-span-6 md:col-span-3 lg:col-span-2 xl:col-span-2">
