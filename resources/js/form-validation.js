@@ -1,6 +1,19 @@
 $(function () {
     $("form[name='product-add']").validate({
         // Specify validation rules
+        errorPlacement: function (error, element) {
+            error.insertAfter( element.parent("div"));
+        },
+        highlight: function (element) {
+            $(element)
+                .closest('.input')
+                .addClass('border-red-500');
+        },
+        unhighlight: function (element) {
+            $(element)
+                .closest('.input')
+                .removeClass('border-red-500');
+        },
         rules: {
             // The key name on the left side is the name attribute
             // of an input field. Validation rules are defined
