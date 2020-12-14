@@ -3,6 +3,7 @@
 namespace App\Repositories;
 
 use App\Bootstrap\Database;
+use App\Formatters\DataFormatter;
 use App\Models\Product;
 
 class ProductRepository
@@ -47,6 +48,17 @@ class ProductRepository
 
     public function insert(array $data)
     {
+        $data['price'] *= 100;
+
+        $data['size'] ? $data['size'] *= 100 : '';
+        $data['weight'] ? $data['weight'] *= 100 : '';
+
+        if($data['height']) {
+            $data['height'] *= 100;
+            $data['width'] *= 100;
+            $data['length'] *= 100;
+        }
+
         $this->connection
             ->query()
             ->insert('products')
@@ -75,11 +87,13 @@ class ProductRepository
             ->execute();
     }
 
-    public function massDelete()
+    public function deleteBySky(string $sku)
     {
         $this->connection
             ->query()
             ->delete('products')
+            ->where('sku = :sku')
+            ->setParameter('sku', $sku)
             ->execute();
     }
 }

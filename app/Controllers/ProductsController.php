@@ -32,7 +32,9 @@ class ProductsController
 
     public function delete()
     {
-        (new MassDeleteProductService())->execute();
+        if(isset($_POST['products'])) {
+            (new MassDeleteProductService())->execute($_POST['products']);
+        }
 
         header('Location: /product/list');
     }

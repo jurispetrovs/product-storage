@@ -13,8 +13,11 @@ class MassDeleteProductService
         $this->productRepository = new ProductRepository();
     }
 
-    public function execute()
+    public function execute(array $products)
     {
-        $this->productRepository->massDelete();
+        foreach ($products as $key => $product)
+        {
+            $this->productRepository->deleteBySky($key);
+        }
     }
 }
