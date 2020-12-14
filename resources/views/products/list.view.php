@@ -12,7 +12,7 @@
         <header>
             <nav class="flex items-center justify-between flex-wrap bg-white py-4 mx-auto px-8 mt-8">
                 <div class="text-2xl mx-auto ml-6 px-4 sm:px-8 py-2 text-center">
-                    Product Add
+                    Product List
                 </div>
 
                 <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto lg:block pt-6 lg:pt-0" id="nav-content">
