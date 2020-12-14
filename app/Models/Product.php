@@ -37,49 +37,49 @@ class Product
         $this->length = $length;
     }
 
-    public function getSku(): string
+    public function sku(): string
     {
         return $this->sku;
     }
 
-    public function getName(): string
+    public function name(): string
     {
         return $this->name;
     }
 
-    public function getPrice(): string
+    public function price(): string
     {
         return number_format(($this->price / 100), 2);
     }
 
-    public function getType(): string
+    public function type(): string
     {
         return $this->type;
     }
 
-    public function getSize(): ?string
+    public function size(): ?string
     {
-        return $this->size;
+        return number_format(($this->size / 100), 2);
     }
 
-    public function getWeight(): ?string
+    public function weight(): ?string
     {
-        return $this->weight;
+        return number_format(($this->weight / 100), 2);
     }
 
-    public function getHeight(): ?string
+    public function height(): ?string
     {
-        return $this->height;
+        return number_format(($this->height / 100), 2);
     }
 
-    public function getLength(): ?string
+    public function width(): ?string
     {
-        return $this->length;
+        return number_format(($this->width / 100), 2);
     }
 
-    public function getWidth(): ?string
+    public function length(): ?string
     {
-        return $this->width;
+        return number_format(($this->length / 100), 2);
     }
 
     public static function create(array $data): self
@@ -87,8 +87,8 @@ class Product
         return new self(
             $data['sku'],
             $data['name'],
-            $data['type'],
             $data['price'],
+            $data['type'],
             $data['size'],
             $data['weight'],
             $data['height'],
