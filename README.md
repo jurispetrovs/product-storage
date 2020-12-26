@@ -1,5 +1,10 @@
 # Product Storage
 
+Web application that allows users to create a list of products with the ability to select the type of product.
+There is also a mass delete function, for this, the user needs to tick the checkbox of the product that want to delete.
+
+![](ProductStorage.gif)
+
 ### Prerequisites
 
 1. PHP 7.4 or above
@@ -15,4 +20,4 @@
 5. Set up your `.env` file.
 6. Install Composer on the application - `composer install`.
 7. Launch the project with command: `php -S localhost:8000`.
-8. Open page localhost:8000 in your browser.
+8. Open page `localhost:8000` in your browser.
