@@ -3,7 +3,6 @@
 namespace App\Repositories;
 
 use App\Bootstrap\Database;
-use App\Formatters\DataFormatter;
 use App\Models\Product;
 
 class ProductRepository
